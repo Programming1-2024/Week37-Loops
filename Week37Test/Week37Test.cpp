@@ -17,15 +17,15 @@ namespace Week37Test
 		}
 		TEST_METHOD(Test_ArraySum_SeveralSize)
 		{
-			int arrSize3[] = { 1, 2, 3 };
-			int arrSize10[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+			std::vector<int> arrSize3 = { 1, 2, 3 };
+			std::vector<int> arrSize10 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 			Assert::AreEqual(6, ArraySum(arrSize3));
 			Assert::AreEqual(55, ArraySum(arrSize10));
 		}
 
 		TEST_METHOD(Test_ArraySum_Size1)
 		{
-			int arr[] = { 3 };
+			std::vector<int> arr = { 3 };
 			Assert::AreEqual(3, ArraySum(arr));
 		}
 
@@ -33,25 +33,25 @@ namespace Week37Test
 
 		TEST_METHOD(Test_ArraySum_NegativeNumbers)
 		{
-			int arrNegative[] = { -5, -2, -3 };
+			std::vector<int> arrNegative = { -5, -2, -3 };
 			Assert::AreEqual(-10, ArraySum(arrNegative));
 		}
 
 		TEST_METHOD(Test_ArraySum_Zeros)
 		{
-			int arrZero[] = { 0, 0, 0, 0, 0 };
+			std::vector<int> arrZero = { 0, 0, 0, 0, 0 };
 			Assert::AreEqual(0, ArraySum(arrZero));
 		}
 
 		TEST_METHOD(Test_ArraySum_SumZero)
 		{
-			int arrZeroSum[] = { 1, -1, 8, -8, 3, -3 };
+			std::vector<int> arrZeroSum = { 1, -1, 8, -8, 3, -3 };
 			Assert::AreEqual(0, ArraySum(arrZeroSum));
 		}
 
 		TEST_METHOD(Test_ArrayPrint_OneToFive)
 		{
-			int arr[] = { 1, 2, 3, 4, 5 };
+			std::vector<int> arr = { 1, 2, 3, 4, 5 };
 			std::string expected = "1\n2\n3\n4\n5\n";
 
 			std::stringstream buffer;
@@ -72,7 +72,7 @@ namespace Week37Test
 
 		TEST_METHOD(Test_ArrayPrint_72245)
 		{
-			int arr[] = { 7, 2, 2, 4, 5 };
+			std::vector<int> arr = { 7, 2, 2, 4, 5 };
 			std::string expected = "7\n2\n2\n4\n5\n";
 
 			std::stringstream buffer;
@@ -93,7 +93,7 @@ namespace Week37Test
 		TEST_METHOD(Test_ArrayPrint_DoubleDigits)
 		{
 			std::string expected = "82\n10\n0\n100\n2\n";
-			int arr[] = { 82, 10, 0, 100, 2 };
+			std::vector<int> arr = { 82, 10, 0, 100, 2 };
 
 			std::stringstream buffer;
 			std::streambuf* sbuf = std::cout.rdbuf(); //Save cout's buffer
@@ -113,36 +113,36 @@ namespace Week37Test
 
 		TEST_METHOD(Test_ArraySumUpTo_Equal)
 		{
-			int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+			std::vector<int> arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 			Assert::AreEqual(55, ArraySumUpTo(arr, 55));
 		}
 
 		TEST_METHOD(Test_ArraySumUpTo_GreaterThan)
 		{
-			int arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 11 };
+			std::vector<int> arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 11 };
 			Assert::AreEqual(56, ArraySumUpTo(arr, 55));
 		}
 		
 		TEST_METHOD(Test_ArraySumUpTo_FullArray)
 		{
-			int arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 9 };
+			std::vector<int> arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 9 };
 			Assert::AreEqual(54, ArraySumUpTo(arr, 55));
 		}
 
 		TEST_METHOD(Test_ArraySumUpTo_EarlyExit)
 		{
-			int arr[] = {30, 20, 2, 1, 40, 1, 2, 3, 4, 5};
+			std::vector<int> arr = {30, 20, 2, 1, 40, 1, 2, 3, 4, 5};
 			Assert::AreEqual(93, ArraySumUpTo(arr, 55));
 		}
 
 		TEST_METHOD(Test_ArraySumUpTo_SingleElement)
 		{
-			int arr[] = { 55, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+			std::vector<int> arr = { 55, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 			Assert::AreEqual(55, ArraySumUpTo(arr, 55));
 		}
 
 		TEST_METHOD(Test_ArraySumUpTo_UpTo5) {
-			int arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+			std::vector<int> arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 			Assert::AreEqual(6, ArraySumUpTo(arr, 5));
 		}
 	};
