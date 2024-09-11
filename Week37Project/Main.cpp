@@ -8,17 +8,13 @@ int main() {
 	
 	std::vector<int> arr = { 1, 1, 1, 1, 1 };
 	std::cout << "Trye size of array: 5" << std::endl << "Calculated size: " << arr.size() << std::endl;
-	std::cout << ArraySum(arr) << std::endl;
-	ArrayPrint(arr);
 }
 
 /*
 * Prints out all elements in an array.
 */
 void ArrayPrint(std::vector<int> arr) {
-	for (int i : arr){
-		std::cout << arr[i] << std::endl;
-	}
+	//TODO
 }
 
 /*
@@ -26,8 +22,9 @@ void ArrayPrint(std::vector<int> arr) {
 * Function starts iterating at arr[0] and increments by 1.
 */
 int ArraySumUpTo(std::vector<int> arr, int upTo) {
+	int sum = 0;
 	//TODO
-	return 0;
+	return sum;
 }
 
 /*
@@ -37,8 +34,6 @@ int ArraySumUpTo(std::vector<int> arr, int upTo) {
 */
 int ArraySum(std::vector<int> arr) {
 	int sum = 0;
-	for (int i : arr) {
-		sum += arr[i];
-	}
+	//TODO
 	return sum;
 }
